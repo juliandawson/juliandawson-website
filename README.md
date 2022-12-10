@@ -1,4 +1,7 @@
-### Hi there 👋
+### Hello 👋
+
+- 📫 How to reach me: ... [hello@juliandawson.co.uk](mailto:hello@juliandawson.co.uk)
+- 😄 Pronouns: ... He/Him
 
 <!--
 **juliandawson/juliandawson** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
