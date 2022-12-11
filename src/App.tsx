@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
 
+import { data } from "./db";
+
 export function App() {
   return (
     <div
@@ -36,6 +38,15 @@ export function App() {
               GitHub
             </a>
           </li>
+        </ul>
+        <ul>
+          {data.roles.map((role) => (
+            <li>
+              {role.type === "Freelance"
+                ? `Freelance ${role.title}`
+                : `${role.title} at ${role.company?.name}`}
+            </li>
+          ))}
         </ul>
         <p>
           &copy; Julian Dawson {new Date().getFullYear()}{" "}
