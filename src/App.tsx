@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
+import dayjs from "dayjs";
 
 import { data } from "./db";
 
@@ -40,11 +41,16 @@ export function App() {
           </li>
         </ul>
         <ul>
-          {data.roles.map((role) => (
-            <li>
+          {data.roles.map((role, i) => (
+            <li key={i}>
               {role.type === "Freelance"
                 ? `Freelance ${role.title}`
                 : `${role.title} at ${role.company?.name}`}
+              {", "}
+              {dayjs(role.startDate).format("MMM YYYY")} -{" "}
+              {dayjs(role.endDate).format("MMM YYYY")}
+              {" / "}
+              {dayjs(role.endDate).diff(dayjs(role.startDate), "M")} months
             </li>
           ))}
         </ul>
