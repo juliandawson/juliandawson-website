@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="home">
+  <div class="posts">
+    {% for post in site.posts %}
+    <article class="post">
+      <h5>
+        <a href="{{ site.baseurl }}{{ post.url }}"
+          >{{ post.title }} - {{ post.date | date: "%B %e, %Y" }}</a
+        >
+      </h5>
+    </article>
+
+    {% endfor %}
+  </div>
+  <div class="projects">
+    <ul>
+      {% for item in site.data.projects %}
+      <li>{{ item.name }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
